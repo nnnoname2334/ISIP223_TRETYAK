@@ -381,7 +381,20 @@ class Enemy : Player
     }
 
     // Получение урона от игрока (учитываем броню врага)
-   
+    public void GetDamage(double dmg)
+    {
+        double result = dmg - defence;
+        if (result > 0)
+        {
+            hp -= Math.Round(result, 3);
+            Console.WriteLine($"Враг получил {Math.Round(result, 2)} урона.");
+        }
+        else
+        {
+            Console.WriteLine("Урон не прошёл сквозь броню врага.");
+        }
+        Thread.Sleep(300);
+    }
 
     public new void info()
     {

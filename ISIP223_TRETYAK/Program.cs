@@ -209,7 +209,23 @@ void MainLoop()
             break;
     }
 
-    int
+    int turn = 0;
+    while (player.hp > 0)
+    {
+        turn++;
+        Console.WriteLine($"\n--- Ход {turn} ---");
+        Thread.Sleep(400);
+
+        // Каждые 10 ходов — босс
+        if (turn % 10 == 0)
+        {
+            Console.WriteLine("ОНО ПРИБЛИЖАЕТСЯ... Это босс!");
+            Thread.Sleep(800);
+            int indBoss = rand.Next(bossList.Count);
+            Enemy boss = bossList[indBoss];
+            Battle(boss);
+            if (player.hp <= 0) { End(difficult); return; }
+            continue;
         }
 
         // 50 на 50: сундук или враг

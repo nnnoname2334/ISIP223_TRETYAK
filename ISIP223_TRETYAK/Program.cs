@@ -26,7 +26,7 @@ void End(string difficult)
     Console.Clear();
     if (player.hp <= 0)
     {
-        Console.WriteLine("Иди поиграй лучше в свой аркадный Dark Souls");
+        Console.WriteLine("Вы проиграли!");
         return;
     }
     if (difficult != "2" && difficult != "1")

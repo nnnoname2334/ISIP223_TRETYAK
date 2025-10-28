@@ -13,10 +13,10 @@ enemyList.Add(new Enemy("Скелет", 20, 2, 2, ignore_defence: true));
 enemyList.Add(new Enemy("Маг", 15, 3, 5, freeze_chance: 0.15));
 
 // Боссы (характеристики — модификаторы от базовых, но здесь указаны напрямую согласно ТЗ)
-bossList.Add(new Enemy("ВВГ", 10 * 2.0, 3 * 1.2, 4 * 1.5, crit_chance: 0.2 + 0.1)); // гоблин-босс
-bossList.Add(new Enemy("Ковальский", 20 * 2.5, 2 * 1.4, 3 * 1.3, ignore_defence: true)); // скелет-босс
-bossList.Add(new Enemy("Архимаг C++", 15 * 1.8, 3 * 1.1, 5 * 1.6, freeze_chance: 0.15 + 0.10)); // маг-босс
-bossList.Add(new Enemy("Пестов С--", 20 * 1.3, 2 * 0.6, 3 * 1.8, freeze_chance: 0.15 + 0.15, ignore_defence: true)); // смешанный/скелет с шансом заморозки
+bossList.Add(new Enemy("КОРОЛЬ ГОБЛИНОВ", 10 * 2.0, 3 * 1.2, 4 * 1.5, crit_chance: 0.2 + 0.1)); // гоблин-босс
+bossList.Add(new Enemy("КОРОЛЬ СКЕЛЕТОВ", 20 * 2.5, 2 * 1.4, 3 * 1.3, ignore_defence: true)); // скелет-босс
+bossList.Add(new Enemy("АРХИМАГ", 15 * 1.8, 3 * 1.1, 5 * 1.6, freeze_chance: 0.15 + 0.10)); // маг-босс
+bossList.Add(new Enemy("ЧУДИЩЕ", 20 * 1.3, 2 * 0.6, 3 * 1.8, freeze_chance: 0.15 + 0.15, ignore_defence: true)); // смешанный/скелет с шансом заморозки
 
 Player player = new Player(35, 3, 6, 0.2);
 
